@@ -1,0 +1,7 @@
+FROM nginx:latest
+ENV ARIA2_IP=""
+ENV ARIA2_PORT="6800"
+ENV FILES_PATH="files"
+
+ADD ./docs /webui-aria2
+COPY aria2.conf.template /etc/nginx/templates/default.conf.template
